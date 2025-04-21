@@ -1,6 +1,6 @@
 services:
   my-container:
-    image: ghcr.io/uvasds-systems/docker-iss:latest
+    image: ghcr.io/jqk5ct/iss-loc:latest
     pull_policy: always
     container_name: iss-loc
     environment:
