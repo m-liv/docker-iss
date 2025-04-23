@@ -1,8 +1,8 @@
 services:
   my-container:
-    image: ghcr.io/jqk5ct/iss-loc:latest
+    image: ghcr.io/jqk5ct/docker-iss:latest
     pull_policy: always
-    container_name: iss-loc
+    container_name: docker-iss
     environment:
       - MONGOPASS=${MONGOPASS}
 
