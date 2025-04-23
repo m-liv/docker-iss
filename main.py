@@ -30,6 +30,7 @@ def get_iss_location():
 
         # fetch values from response
         timestamp = r['timestamp']
+        
         # convert timestamp to human readable date and time (out of epoch)
         dt_obj = datetime.datetime.fromtimestamp(timestamp)
         dtime = dt_obj.strftime('%Y-%m-%d-%H:%M:%S')
@@ -65,7 +66,7 @@ def write_to_mongo(dtime, long, lat):
         client = MongoClient(connection_string)
 
         # use your UVA computing ID for the database name
-        db = client['mst3k']
+        db = client['jqk5ct']
         collection = db['locations']
         collection.insert_one({'timestamp': dtime, 'longitude': long, 'latitude': lat})
         logger.info('Output written to MongoDB')
